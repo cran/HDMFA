@@ -1,0 +1,14 @@
+importFrom("stats","rnorm","runif","median")
+
+import(MASS)
+import(RSpectra)
+
+export(alpha_PCA)
+export(KPCA)
+
+export(PE)
+export(KPE)
+
+export(MHFA)
+export(KMHFA)
+
