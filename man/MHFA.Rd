@@ -52,11 +52,13 @@ The other one is based on minimizing the element-wise Huber loss. Define
 \value{
 The return value is a list. In this list, it contains the following:
 \item{F}{The estimated factor matrix of dimension \eqn{T \times m_1\times m_2}.}
-\item{R}{The estimated row loading matrix of dimension \eqn{p_1\times m_1}.}
-\item{C}{The estimated column loading matrix of dimension \eqn{p_2\times m_2}.}
+\item{R}{The estimated row loading matrix of dimension \eqn{p_1\times m_1}, satisfying \eqn{\bold{R}^\top\bold{R}=p_1\bold{I}_{m_1}}.}
+\item{C}{The estimated column loading matrix of dimension \eqn{p_2\times m_2}, satisfying \eqn{\bold{C}^\top\bold{C}=p_2\bold{I}_{m_2}}.}
 }
 \references{
 He, Y., Kong, X., Yu, L., Zhang, X., & Zhao, C. (2023). Matrix factor analysis: From least squares to iterative projection. Journal of Business & Economic Statistics, 1-26.
+
+He, Y., Kong, X. B., Liu, D., & Zhao, R. (2023). Robust Statistical Inference for Large-dimensional Matrix-valued Time Series via Iterative Huber Regression. <arXiv:2306.03317>.
 }
 \author{
 Yong He, Changwei Zhao, Ran Zhao.

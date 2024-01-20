@@ -58,6 +58,8 @@ If \code{method="E_ER"}, the number of factors \eqn{k_1} and \eqn{k_2} are estim
 }
 \references{
 He, Y., Kong, X., Yu, L., Zhang, X., & Zhao, C. (2023). Matrix factor analysis: From least squares to iterative projection. Journal of Business & Economic Statistics, 1-26.
+
+He, Y., Kong, X. B., Liu, D., & Zhao, R. (2023). Robust Statistical Inference for Large-dimensional Matrix-valued Time Series via Iterative Huber Regression. <arXiv:2306.03317>.
 }
 \author{
 Yong He, Changwei Zhao, Ran Zhao.

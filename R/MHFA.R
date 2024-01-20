@@ -33,10 +33,10 @@ RMFA <- function(X,k1,k2){
   while (L_old>L_new) {
     Fr=rowcov(X,C,w)*T*p2
     Fr_eigen=eigen(Fr)
-    R_new=Fr_eigen$vectors[,1:k1]
+    R_new=Fr_eigen$vectors[,1:k1]*sqrt(p1)
     Fc=colcov(X,R,w)*T*p1
     Fc_eigen=eigen(Fc)
-    C_new=Fc_eigen$vectors[,1:k2]
+    C_new=Fc_eigen$vectors[,1:k2]*sqrt(p2)
     tau=c()
     for (i in 1:T) {
       tau[i]=sqrt(abs(sum(diag(t(X[i,,])%*%X[i,,]-
@@ -72,12 +72,12 @@ KRMFM <- function(X,kmax,c=0){
   for(t in 1:T){
     A=A+X[t,,]%*%t(X[t,,])
   }
-  R1=svds(A,kmax,kmax,kmax)$u
+  R1=svds(A,kmax,kmax,kmax)$u*sqrt(p1)
   B=matrix(0,p2,p2)
   for(t in 1:T){
     B=B+t(X[t,,])%*%X[t,,]
   }
-  C1=svds(B,kmax,kmax,kmax)$u
+  C1=svds(B,kmax,kmax,kmax)$u*sqrt(p2)
   
   tau=c()
   for (i in 1:T) {

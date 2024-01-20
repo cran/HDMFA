@@ -17,7 +17,7 @@ KPCA(X, kmax, alpha = 0)
   The user-supplied maximum factor numbers. Here it means the upper bound of the number of row factors and column factors.
 }
   \item{alpha}{
-   A hyper-parameter balancing the information of the first and second moments    (\eqn{\alpha \geq 1} ). The default is 0.
+   A hyper-parameter balancing the information of the first and second moments    (\eqn{\alpha \geq -1} ). The default is 0.
 }
 }
 \details{

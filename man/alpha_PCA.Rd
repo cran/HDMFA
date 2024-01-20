@@ -20,7 +20,7 @@ alpha_PCA(X, m1, m2, alpha = 0)
   A positive integer indicating the column factor numbers.
 }
   \item{alpha}{
-  A hyper-parameter balancing the information of the first and second moments    (\eqn{\alpha \geq 1} ). The default is 0.
+  A hyper-parameter balancing the information of the first and second moments    (\eqn{\alpha \geq -1} ). The default is 0.
 }
 }
 \details{
@@ -32,8 +32,8 @@ where \eqn{\alpha \in} [-1,\eqn{+\infty}], \eqn{\bar{\bold{X}} = \frac{1}{T} \su
 \value{
 The return value is a list. In this list, it contains the following:
 \item{F}{The estimated factor matrix of dimension \eqn{T \times m_1\times m_2}.}
-\item{R}{The estimated row loading matrix of dimension \eqn{p_1\times m_1}.}
-\item{C}{The estimated column loading matrix of dimension \eqn{p_2\times m_2}.}
+\item{R}{The estimated row loading matrix of dimension \eqn{p_1\times m_1}, satisfying \eqn{\bold{R}^\top\bold{R}=p_1\bold{I}_{m_1}}.}
+\item{C}{The estimated column loading matrix of dimension \eqn{p_2\times m_2}, satisfying \eqn{\bold{C}^\top\bold{C}=p_2\bold{I}_{m_2}}.}
 }
 \references{
 Chen, E. Y., & Fan, J. (2021). Statistical inference for high-dimensional matrix-variate factor models. Journal of the American Statistical Association, 1-18.

@@ -30,8 +30,8 @@ Given \eqn{\bold{Y}_t}, define \deqn{ \bold{M}_1 = \frac{1}{Tp_1} \sum_{t=1}^T \
 \value{
 The return value is a list. In this list, it contains the following:
 \item{F}{The estimated factor matrix of dimension \eqn{T \times m_1\times m_2}.}
-\item{R}{The estimated row loading matrix of dimension \eqn{p_1\times m_1}.}
-\item{C}{The estimated column loading matrix of dimension \eqn{p_2\times m_2}.}
+\item{R}{The estimated row loading matrix of dimension \eqn{p_1\times m_1}, satisfying \eqn{\bold{R}^\top\bold{R}=p_1\bold{I}_{m_1}}.}
+\item{C}{The estimated column loading matrix of dimension \eqn{p_2\times m_2}, satisfying \eqn{\bold{C}^\top\bold{C}=p_2\bold{I}_{m_2}}.}
 }
 \references{
 Yu, L., He, Y., Kong, X., & Zhang, X. (2022). Projected estimation for large-dimensional matrix factor models. Journal of Econometrics, 229(1), 201-217.

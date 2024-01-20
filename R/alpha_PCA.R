@@ -18,8 +18,8 @@ alpha_PCA <- function(X,m1,m2,alpha=0){
   }
   MC2=MC2/T
   
-  Rhat=aPCAR(MR1,MR2,m1,alpha)
-  Chat=aPCAC(MC1,MC2,m2,alpha)
+  Rhat=aPCAR(MR1,MR2,m1,alpha)*sqrt(p1)
+  Chat=aPCAC(MC1,MC2,m2,alpha)*sqrt(p2)
   Fhat=array(0,c(T,m1,m2))
   for(t in 1:T){
     Fhat[t,,]=t(Rhat)%*%X[t,,]%*%Chat/(p1*p2)

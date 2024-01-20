@@ -5,8 +5,8 @@ PE <- function(X,m1,m2){
   
   C0 <- alpha_PCA(X,m1,m2,alpha=0)$C
   R0 <- alpha_PCA(X,m1,m2,alpha=0)$R
-  Rhat=SCR2(X,m1,C0)
-  Chat=SCC2(X,m2,R0)
+  Rhat=SCR2(X,m1,C0)*sqrt(p1)
+  Chat=SCC2(X,m2,R0)*sqrt(p2)
   Fhat=array(0,c(T,m1,m2))
   for(t in 1:T){
     Fhat[t,,]=t(Rhat)%*%X[t,,]%*%Chat/(p1*p2)
